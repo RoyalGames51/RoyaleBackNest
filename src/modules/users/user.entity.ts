@@ -55,6 +55,9 @@ export class User {
   @Column({ type: 'varchar', default: false })
   firstChips: boolean;
 
+  @Column({ type: 'varchar', nullable: false })
+  sexo: string;
+
   @OneToMany(() => Pay, (pay) => pay.user)
   payments: Pay[];
 
